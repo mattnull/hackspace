@@ -17,20 +17,54 @@
 		padding:10px 0;
 		text-align: center;
 		}
-		header h1{
+	header ul li{
+		list-style: none;
+		display: inline-block;
+		float:right;
+		margin-left:10px;
+	}
+	header ul li a {font-size:1.5em;}
+		h1, h2{
 			font-size:3.5em;
 			margin:10px 0;
-			padding:0;
+			padding:10px 0;
+			/*border-bottom: 1px solid #333;*/
 		}
     </style>
   </head>
   <body>
   	<div id="wrapper" class="container-narrow">
-	  	<header class="jumbotron">
-		    <h1>HackSpace [Boulder]</h1>
-		</header>
+  		<header>
+  			<ul>
+  				<li><a href="javascript:void(0);">Login</a></li>
+  				<li><a href="#join" class="link">Join</a></li>
+  				<li><a href="#contact" class="link">Contact</a></li>
+  			</ul>
+  		</header>
+		<h1>HackrSpace [Boulder]</h1>
+		<div class="text">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tellus diam, ullamcorper id tincidunt eget, consequat vel nisl. Cras eleifend venenatis augue in scelerisque. Donec vulputate odio non nisl porttitor ac gravida dolor tincidunt. Vivamus vel odio lectus, vitae porta purus. Sed porttitor gravida diam sed eleifend. Sed rutrum sodales ligula a ultricies. Sed tincidunt ultrices odio id sollicitudin. Donec quis erat ut velit feugiat suscipit.
+		</div>
+		<h2 id="join">Join Us</h2>
+		<div class="text">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tellus diam, ullamcorper id tincidunt eget, consequat vel nisl. Cras eleifend venenatis augue in scelerisque. Donec vulputate odio non nisl porttitor ac gravida dolor tincidunt. Vivamus vel odio lectus, vitae porta purus. Sed porttitor gravida diam sed eleifend. Sed rutrum sodales ligula a ultricies. Sed tincidunt ultrices odio id sollicitudin. Donec quis erat ut velit feugiat suscipit.
+		</div>
+		<h2 id="contact">Contact</h2>
+		<div class="text">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tellus diam, ullamcorper id tincidunt eget, consequat vel nisl. Cras eleifend venenatis augue in scelerisque. Donec vulputate odio non nisl porttitor ac gravida dolor tincidunt. Vivamus vel odio lectus, vitae porta purus. Sed porttitor gravida diam sed eleifend. Sed rutrum sodales ligula a ultricies. Sed tincidunt ultrices odio id sollicitudin. Donec quis erat ut velit feugiat suscipit.
+		</div>
 	</div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="jquery.scrollto.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    $(function(){
+    	$('header li a.link').on('click', function(e){
+    		e.preventDefault();
+    		var target = $(this).attr('href');
+    		$(window).scrollTo(target,300);
+    	});
+    });
+    </script>
   </body>
 </html>
